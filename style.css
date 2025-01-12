@@ -44,6 +44,7 @@ body {
     letter-spacing: 5px;
     position: relative;
     animation: glow 1.5s infinite alternate;
+    font-size: 2.5rem;  /* Boyut küçültüldü */
 }
 
 @keyframes glow {
