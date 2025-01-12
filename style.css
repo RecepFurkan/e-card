@@ -12,7 +12,7 @@ body {
 
 ::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .cat img {
     margin-bottom: 0;
@@ -89,6 +89,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10;
 }
 
 .emergency-button:hover {
@@ -106,6 +107,34 @@ body {
     position: relative;
 }
 
+/* Mobil uyumlu düzenlemeler */
+@media (max-width: 768px) {
+    .cat img {
+        width: 100%;
+    }
+
+    .genel {
+        width: 100%;
+        margin: 0 1rem;
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section {
+        margin-left: 1rem;
+    }
+
+    .emergency-button {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+}
+
 @media (min-width: 992px) {
     .cat img {
         width: 600px;
@@ -120,7 +149,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 0;
     }
 
     .section {
