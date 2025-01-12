@@ -8,11 +8,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 ::-webkit-scrollbar {
@@ -27,32 +22,19 @@ body {
     width: 50%;
 }
 
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .header h1 {
     color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
-    position: relative;
     animation: glow 1.5s infinite alternate;
-    font-size: 2.5rem;  /* Boyut küçültüldü */
 }
 
 @keyframes glow {
     0% {
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     }
     100% {
-        text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1);
     }
 }
 
@@ -67,14 +49,25 @@ body {
     font-size: large;
     line-height: normal;
     margin-bottom: 0;
-    padding: 1rem;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
 }
 
 .section {
     margin-left: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section.visible {
     opacity: 1;
-    transform: none;
-    transition: none;
+    transform: translateY(0);
 }
 
 .emergency-button {
@@ -133,7 +126,6 @@ body {
 
     .section {
         margin-left: 1rem;
-        padding: 0 0.5rem;
     }
 
     .emergency-button {
