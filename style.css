@@ -22,19 +22,28 @@ body {
     width: 50%;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
 .header h1 {
     color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
+    position: relative;
+    z-index: 1;
     animation: glow 1.5s infinite alternate;
 }
 
 @keyframes glow {
     0% {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     }
     100% {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        text-shadow: 0 0 15px rgba(255, 255, 255, 1);
     }
 }
 
@@ -49,25 +58,14 @@ body {
     font-size: large;
     line-height: normal;
     margin-bottom: 0;
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
+    padding: 1rem;
 }
 
 .section {
     margin-left: 2rem;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.section.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+    transition: none;
 }
 
 .emergency-button {
@@ -126,6 +124,7 @@ body {
 
     .section {
         margin-left: 1rem;
+        padding: 0 0.5rem;
     }
 
     .emergency-button {
