@@ -17,7 +17,7 @@ body {
 .cat img {
     margin-bottom: 0;
     position: relative;
-    top: 14px;
+    top: 10px;
     z-index: -1;
     width: 50%;
 }
