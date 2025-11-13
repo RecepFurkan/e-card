@@ -30,7 +30,7 @@ function sendSMS(position) {
     const phoneNumber = "+905439208849";
 
     // Mesaj içeriği
-    const message = ` Kedinizi buldum Konum Bilgisi:\nEnlem: ${lat}\nBoylam: ${lon}`;
+    const message = `Merhaba, Kedinizi Buldum\n Konum Bilgisi:\nEnlem: ${lat}\nBoylam: ${lon}`;
 
     // SMS uygulamasını açmak için sms bağlantısı
     const smsLink = `sms:${phoneNumber}?body=${encodeURIComponent(message)}`;
@@ -38,4 +38,5 @@ function sendSMS(position) {
     // SMS uygulamasını başlat
     window.location.href = smsLink;
 }
+
 
