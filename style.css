@@ -12,7 +12,7 @@ body {
 
 ::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .cat img {
     margin-bottom: 0;
@@ -20,6 +20,9 @@ body {
     top: 10px;
     z-index: -1;
     width: 50%;
+    background-color: white; /* Arka plan beyaz */
+    border-radius: 10px; /* Köşeleri yumuşatır */
+    padding: 5px; /* Görselin etrafında boşluk bırakır */
 }
 
 .header h1 {
@@ -28,9 +31,10 @@ body {
     letter-spacing: 5px;
     animation: glow 1.5s infinite alternate;
 }
+
 a {
-    color: inherit; /* Bağlantının rengini miras alarak değiştirme */
-    text-decoration: none; /* Alt çizgiyi kaldırma */
+    color: inherit; /* Bağlantının rengini miras alır */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
 }
 
 @media (max-width: 475px){
@@ -100,7 +104,7 @@ a {
     color: white;
     font-size: 30px;
     font-weight: bold;
-    z-index:111;
+    z-index: 111;
     cursor: pointer;
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
